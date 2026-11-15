@@ -1,0 +1,130 @@
+@import "@fontsource/sora/300.css";
+@import "@fontsource/sora/400.css";
+@import "@fontsource/sora/500.css";
+@import "@fontsource/sora/600.css";
+@import "@fontsource/sora/700.css";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0A0A0C;
+  --surface: #15151A;
+  --surface-light: #1F1F27;
+  --cream: #F3EEE6;
+  --cream-surface: #EAE3D6;
+  --cream-dark: #242220;
+  --accent: #FF6A2B;
+  --accent-glow: rgba(255, 106, 43, 0.4);
+  --text-primary: #FFFFFF;
+  --text-secondary: #9B9BA8;
+  --divider: rgba(255, 255, 255, 0.08);
+  --divider-cream: rgba(10, 10, 12, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Space Grotesk', 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg);
+  color: #E0E0E6;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  min-height: 100vh;
+}
+
+/* Custom selection */
+::selection {
+  background-color: #FF6A2B;
+  color: #FFFFFF;
+}
+
+/* Lenis smooth scroll recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0C;
+}
+::-webkit-scrollbar-thumb {
+  background: #24242F;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6A2B;
+}
+
+/* Custom glowing effects and dividers */
+.glow-accent {
+  box-shadow: 0 0 35px -5px rgba(255, 106, 43, 0.4);
+}
+
+.glow-text {
+  text-shadow: 0 0 25px rgba(255, 106, 43, 0.6);
+}
+
+.rim-light {
+  position: relative;
+}
+.rim-light::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 106, 43, 0.5), transparent 60%, rgba(255, 255, 255, 0.08));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Interactive cursor styling */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, input, [data-cursor="hover"] {
+    cursor: none;
+  }
+}
+
+/* Accessibility focus styles */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+

@@ -1,0 +1,48 @@
+export const statsData = [
+  {
+    id: 'acceleration',
+    value: 1.88,
+    suffix: 's',
+    label: '0-60 MPH',
+    sublabel: 'With rollout subtracted',
+    icon: 'Zap',
+    decimals: 2,
+  },
+  {
+    id: 'range',
+    value: 520,
+    suffix: ' mi',
+    label: 'EPA EST. RANGE',
+    sublabel: 'Single full charge',
+    icon: 'Compass',
+    decimals: 0,
+  },
+  {
+    id: 'horsepower',
+    value: 1420,
+    suffix: ' hp',
+    label: 'PEAK OUTPUT',
+    sublabel: 'Tri-motor torque vectoring',
+    icon: 'Activity',
+    decimals: 0,
+  },
+  {
+    id: 'architecture',
+    value: 800,
+    suffix: 'V',
+    label: 'ULTRA-FAST ARCH.',
+    sublabel: 'Silicon-carbide inverters',
+    icon: 'BatteryCharging',
+    decimals: 0,
+  },
+  {
+    id: 'chargeTime',
+    value: 12,
+    suffix: ' min',
+    label: '10% TO 80% CHARGE',
+    sublabel: 'At 350 kW DC hyper-chargers',
+    icon: 'Timer',
+    decimals: 0,
+  },
+];
+
