@@ -1,4 +1,4 @@
-# HOTSON — Intelligent Electric Hyper-EV
+# — Intelligent Electric Hyper-EV
 
 > *"Move Beyond The Expected."*
 
